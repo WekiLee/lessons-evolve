@@ -1,0 +1,40 @@
+{
+  "name": "lessons-evolve",
+  "version": "1.0.0",
+  "description": "多 Agent 经验进化规则：把踩过的坑从 lesson 逐步晋升为 pattern 和 instinct。",
+  "main": "SKILL.md",
+  "bin": {
+    "lessons-evolve": "./bin/install.js"
+  },
+  "files": [
+    "SKILL.md",
+    "AGENTS.md",
+    "bin/",
+    "rules/",
+    "README.md",
+    "README_EN.md",
+    "examples/",
+    "tests/"
+  ],
+  "scripts": {
+    "test": "node tests/validate.js"
+  },
+  "keywords": [
+    "claude-code",
+    "skill",
+    "agent",
+    "memory",
+    "lessons-learned",
+    "lessons-evolve"
+  ],
+  "author": "WekiLee",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WekiLee/lessons-evolve.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WekiLee/lessons-evolve/issues"
+  },
+  "homepage": "https://github.com/WekiLee/lessons-evolve#readme"
+}
