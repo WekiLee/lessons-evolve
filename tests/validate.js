@@ -124,6 +124,8 @@ function main() {
   const pkg = JSON.parse(fs.readFileSync(packageFile, 'utf8'));
   assert(pkg.name === frontmatter.name, `package.json name（${pkg.name}）与 SKILL.md name（${frontmatter.name}）一致`);
   assert(pkg.bin && pkg.bin[pkg.name], 'package.json bin 字段包含与包名同名的入口');
+  assert(pkg.bin[pkg.name] === 'bin/install.js', 'package.json bin 入口使用 npm 规范路径 bin/install.js');
+  assert(pkg.scripts && pkg.scripts.validate === 'npm test', 'package.json 包含 validate 脚本并委托 npm test');
   assert(pkg.files && pkg.files.includes('SKILL.md'), 'package.json files 包含 SKILL.md');
   assert(pkg.files && pkg.files.includes('AGENTS.md'), 'package.json files 包含 AGENTS.md');
   assert(pkg.files && pkg.files.includes('README.md'), 'package.json files 包含 README.md');

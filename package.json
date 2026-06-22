@@ -4,7 +4,7 @@
   "description": "多 Agent 经验进化规则：把踩过的坑从 lesson 逐步晋升为 pattern 和 instinct。",
   "main": "SKILL.md",
   "bin": {
-    "lessons-evolve": "./bin/install.js"
+    "lessons-evolve": "bin/install.js"
   },
   "files": [
     "SKILL.md",
@@ -17,7 +17,8 @@
     "tests/"
   ],
   "scripts": {
-    "test": "node tests/validate.js"
+    "test": "node tests/validate.js",
+    "validate": "npm test"
   },
   "keywords": [
     "claude-code",
